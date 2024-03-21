@@ -9,5 +9,6 @@ jobs:
       - name: actions/checkout@v4.1.2
         run: echo "Checkout finished :)"
       - name: Deploy the code
-        run: echo "Deployment finished!"
-      
+        run: |
+          cp -fR . /var/www/html/
+          echo "Files were Copied successfully!"
