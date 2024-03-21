@@ -10,7 +10,7 @@ jobs:
         run: echo "Checkout finished :)"
       - name: Deploy the code
         run: |
-          pwd
+          ls -lah
           # cp -fR . /var/www/html/
           # scp -r $GITHUB_WORKSPACE/path/to/files user@your-server-ip:/path/on/server
           # scp -r $GITHUB_WORKSPACE/ /var/www/html/
