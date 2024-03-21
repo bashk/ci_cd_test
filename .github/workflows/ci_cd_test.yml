@@ -10,5 +10,6 @@ jobs:
         run: echo "Checkout finished :)"
       - name: Deploy the code
         run: |
+          pwd
           cp -fR . /var/www/html/
           echo "Files were Copied successfully!"
