@@ -8,11 +8,4 @@ jobs:
     steps:
       - name: actions/checkout@v4.1.2
         run: echo "Checkout finished :)"
-      - name: Deploy the code
-        run: |
-          ls -lah
-          # cp -fR . /var/www/html/
-          # scp -r $GITHUB_WORKSPACE/path/to/files user@your-server-ip:/path/on/server
-          # scp -r $GITHUB_WORKSPACE/ /var/www/html/
-          ls -lah $GITHUB_WORKSPACE
-          echo "Files were Copied successfully!"
+        working-directory: /var/www/html/
