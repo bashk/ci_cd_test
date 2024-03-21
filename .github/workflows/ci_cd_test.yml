@@ -3,6 +3,8 @@ on:
     branches:
       - main
 jobs:
-  steps:
-    - name: actions/checkout@v4.1.2
-      run: echo "Checkout finished :)"
+  Check-out-the-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/checkout@v4.1.2
+        run: echo "Checkout finished :)"
