@@ -8,4 +8,11 @@ jobs:
     steps:
       - name: actions/checkout@v4.1.2
         run: echo "Checkout finished :)"
-        working-directory: /var/www/html/
+      - name: Deploy the code
+        run: |
+          cd /var/www/html/site1
+          git init
+          git remote add origin https://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@github.com/bashk/ci_cd_test.git
+          git fetch origin
+          git checkout -b master --track origin/master
+          git reset origin/master
