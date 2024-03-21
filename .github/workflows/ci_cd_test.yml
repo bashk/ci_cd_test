@@ -1,1 +1,7 @@
-
+on:
+  push:
+    branches:
+      - main
+jobs:
+  steps:
+    -  uses: actions/checkout@v4.1.2
