@@ -11,10 +11,5 @@ jobs:
       - name: Deploy the code
         run: |
           cd /var/www/html/site1
+          rm -rf
           git clone -b main --single-branch https://${{ secrets.my_token }}@github.com/bashk/ci_cd_test.git
-          # git archive --format=tar --remote=https://${{ secrets.my_token }}@github.com/bashk/ci_cd_test.git master | tar -xf -
-          # git init
-          # git remote add origin https://${{ secrets.my_token }}@github.com/bashk/ci_cd_test.git
-          # git fetch origin branchname:refs/remotes/origin/main
-          # git checkout -b master --track origin/master
-          # git reset origin/master
