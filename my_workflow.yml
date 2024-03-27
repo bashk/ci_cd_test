@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Check-out-the-code:
+    runs-on: self-hosted
+    steps:
+      - name: actions/checkout@v4.1.2
+        run: echo "Checkout finished :)"
+      - name: Deploy the code
+        run: |
+          cd /var/www/html/clone_dir
+          rm -rf *
+          git clone -b main --single-branch https://${{ secrets.my_token }}@github.com/bashk/ci_cd_test.git
+          rsync -av --delete . /var/www/html/site1
